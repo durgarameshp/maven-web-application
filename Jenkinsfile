@@ -1,4 +1,4 @@
-node ('master')
+node ('jenkins-slave')
  {
   
   def mavenHome = tool name: "maven3.6.3"
@@ -15,7 +15,7 @@ node ('master')
   
   stage("CheckOutCodeGit")
   {
-   git branch: 'master', credentialsId: '65fb834f-a83b-4fe7-8e11-686245c47a65', url: 'https://github.com/MithunTechnologiesDevOps/maven-web-application.git'
+   git branch: 'master', credentialsId: 'f7da2e5e-4552-4421-9617-4eb1429eacfe', url: 'https://github.com/durgarameshp/maven-web-application.git'
  }
  
  stage("Build")
